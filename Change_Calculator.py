@@ -7,16 +7,13 @@
 # This portion of the code will calculate the change between the tender and the cost.
 
 # This is the amount paid.
-def(paid)
-paid = float(raw_input("How much are you paying?: "))
+paid = float(input("How much are you paying?: "))
 # This will calculate the cost.
-def(cost)
-cost = float(raw_input("How much does it cost?: "))
+cost = float(input("How much does it cost?: "))
 # This will indicate the change to be received.
-def(change)
-change = ("paid" - "cost")
-# This presents the change
-print("Your change is:" change)
+change = (paid - cost)
+# This presents the change, rounded to two decimal points.
+print("Your change is:", ("%.2f" % change))
 
 # This portion of the code will separate the change in quarters, dimes, nickels and pennies.
 def(change_whole)
