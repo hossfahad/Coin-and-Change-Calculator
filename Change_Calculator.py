@@ -20,7 +20,7 @@ print("Your change is:" change)
 
 # This portion of the code will separate the change in quarters, dimes, nickels and pennies.
 def(change_whole)
-change_whole = raw_input("Please enter an amount of change")
+change_whole = raw_input("Please enter the amount of change:")
 
 
 "quarters" = int(change_whole // 25) # Number of quarters
