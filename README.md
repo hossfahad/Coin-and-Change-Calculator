@@ -8,3 +8,4 @@ Update 7/25 - I have decided to add an additional function which will separate t
 Update 7/26 - Major bug fixes for the change in transaction. 
 
 Update 8/6 - I have added the coin functionality, though I am having a light difficulty in printing in to the user.
+Update 8/6 - I have fixed getting the output to receive correct change from the biggest coin to smallest.
