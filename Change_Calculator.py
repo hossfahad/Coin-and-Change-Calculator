@@ -29,7 +29,7 @@ cost = int(float(cost) * 100)
 change = paid - cost
 
 # This portion subtracts the total once divided by a quarter, which is then divided into dimes and so on.
-qb = change / quarter
+qb = change // quarter
 qpartialchange = change - qb * quarter
 db = qpartialchange // dime
 dpartialchange = qpartialchange - db * dime
@@ -39,4 +39,4 @@ pb = npartialchange // penny
 ppartialchange = npartialchange - pb * penny
 
 # This prints the change in their respective coin.
-print("Your change is in %s quarters, %s dimes, %s nickels and %s pennies") % (qb, db, nb, pb)
+print("Your change is in %s quarters, %s dimes, %s nickels and %s pennies" % qb, db, nb, pb))
