@@ -75,4 +75,3 @@ ppartialchange = npartialchange - pb * penny
 
 # This prints the change in their respective coin.
 print("Your change will be in: %s fifty-dollar notes, %s twenty-dollar notes, %s ten-dollar notes, %s five-dollar notes, %s single-dollar notes, %s quarters, %s dimes, %s nickels and %s pennies" % (ffdb, twdb, tdb, fdb, sdb, qb, db, nb, pb))
-hange is in %s quarters, %s dimes, %s nickels and %s pennies" % qb, db, nb, pb))
