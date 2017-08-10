@@ -15,8 +15,6 @@ change = (paid - cost)
 print("Your change is:", ("%.2f" % change))
 
 # This portion of the code will separate the change in quarters, dimes, nickels and pennies.
-
-
 # The value of coins in USD.
 hundreddollar = 10000
 fiftydollar = 5000
@@ -28,6 +26,9 @@ quarter = 25
 dime = 10
 nickel = 5
 penny = 1
+coins = [10000, 5000, 2000, 1000, 500, 100, 25, 10, 5, 1]
+coinNames = ["hundred dollar bills", "fifty dollar bills", "twenty dollar bills", "ten dollar bills", \
+             "five dollar  bills", "one dollar bills", "quarters", "dimes", "nickels", "pennies"]
 
 # This shows how to retrieve the change that will be separated.
 paid = int(float(paid) * 100)
@@ -35,24 +36,15 @@ cost = int(float(cost) * 100)
 change = paid - cost
 
 # This portion subtracts the total once divided by a dollar, which is then divided into quarters and so on.
-ffdb = change // fiftydollar
-ffdbpartialchange = change - ffdb * fiftydollar
-twdb = ffdbpartialchange // twentydollar
-twdbpartialchange = ffdbpartialchange - twdb * twentydollar
-tdb = twdbpartialchange // tendollar
-tdbpartialchange = twdbpartialchange - tdb * tendollar
-fdb = tdbpartialchange // fivedollar
-fdbpartialchange = change - fdb * fivedollar
-sdb = fdbpartialchange // onedollar
-sdbpartialchange = change - sdb * onedollar
-qb = sdbpartialchange // quarter
-qpartialchange = sdbpartialchange - qb * quarter
-db = qpartialchange // dime
-dpartialchange = qpartialchange - db * dime
-nb = dpartialchange // nickel
-npartialchange = dpartialchange - nb * nickel
-pb = npartialchange // penny
-ppartialchange = npartialchange - pb * penny
+amts = []
 
+for idx, value in enumerate(coins):
+    amt = change // value
+    change = change % value
+    amts.append((int(amt), coinNames[idx]))
+    
 # This prints the change in their respective coin.
-print("Your change will be in: %s fifty-dollar notes, %s twenty-dollar notes, %s ten-dollar notes, %s five-dollar notes, %s single-dollar notes, %s quarters, %s dimes, %s nickels and %s pennies" % (ffdb, twdb, tdb, fdb, sdb, qb, db, nb, pb))
+
+print("Your change will be in: ")
+for amt, coin in amts:
+    print(amt, coin)
