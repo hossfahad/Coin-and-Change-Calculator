@@ -36,6 +36,7 @@ cost = int(float(cost) * 100)
 change = paid - cost
 
 # This portion subtracts the total once divided by a dollar, which is then divided into quarters and so on.
+# Use of loop in order to divide change amongst each bill respectively. 
 amts = []
 
 for idx, value in enumerate(coins):
