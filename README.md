@@ -12,3 +12,5 @@ Update 8/6 - I have added the coin functionality, though I am having a light dif
 Update 8/6 - I have fixed getting the output to receive correct change from the biggest coin to smallest.
 
 Update 8/7 - Added paper-bill functionality + minor changes in syntax.
+
+Update 8/10 - Changed code to make use of loops for getting change. This cut the code greatly. Has made it much easier and more understandable.
