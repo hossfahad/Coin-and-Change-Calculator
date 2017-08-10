@@ -17,25 +17,6 @@ print("Your change is:", ("%.2f" % change))
 # This portion of the code will separate the change in quarters, dimes, nickels and pennies.
 
 
-# Change and Coin Calculator
-# Created by Fahad Hossain
-# This program will give the exact amount of change in a transaction from how much paid and cost.
-# The change, once input, will also return it in quarters, dimes, nickels and pennies. 
-
-# This portion of the code will calculate the change between the tender and the cost.
-
-# This is the amount paid.
-paid = float(input("How much are you paying?: "))
-# This will calculate the cost.
-cost = float(input("How much does it cost?: "))
-# This will indicate the change to be received.
-change = (paid - cost)
-# This presents the change
-print("Your change is:", ("%.2f" % change))
-
-# This portion of the code will separate the change in quarters, dimes, nickels and pennies.
-
-
 # The value of coins in USD.
 hundreddollar = 10000
 fiftydollar = 5000
